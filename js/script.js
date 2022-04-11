@@ -30,6 +30,38 @@ if(emailTrovata == true){
             
         }
 
+
+/*
+Gioco dei dadi
+Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+*/
+
+let numeroGiocatore = Math.ceil(Math.random() * 6);
+let numeroPc = Math.ceil(Math.random() * 6) ;
+let text = `Numero Giocatore estratto : ${numeroGiocatore} Numero Pc estratto : ${numeroPc}`;
+document.getElementById("estrazione").innerHTML += text;
+const bottone = document.getElementById("gioca");
+vsdx
+
+bottone.addEventListener("click", function(){
+    if(numeroGiocatore > numeroPc){
+        document.getElementById("risultato").innerHTML += "Hai vinto"
+        
+    }else if(numeroGiocatore === numeroPc){
+        document.getElementById("risultato").innerHTML += "Pareggio"
+        
+    
+    }else if(numeroGiocatore < numeroPc){
+        document.getElementById("risultato").innerHTML += "Hai perso"
+        
+    }
+
+});
+
+
+
    
     
     
